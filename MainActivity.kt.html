@@ -1,52 +1,79 @@
-<html>
-<head>
-<title>MainActivity.kt</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-.s0 { color: #cf8e6d;}
-.s1 { color: #bcbec4;}
-.s2 { color: #bcbec4;}
-</style>
-</head>
-<body bgcolor="#1e1f22">
-<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
-<tr><td><center>
-<font face="Arial, Helvetica" color="#000000">
-MainActivity.kt</font>
-</center></td></tr></table>
-<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">uts</span>
-<span class="s1">import android</span><span class="s2">.</span><span class="s1">content</span><span class="s2">.</span><span class="s1">Intent</span>
-<span class="s1">import android</span><span class="s2">.</span><span class="s1">widget</span><span class="s2">.</span><span class="s1">Button</span>
-<span class="s1">import android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span>
-<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">enableEdgeToEdge</span>
-<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">appcompat</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">AppCompatActivity</span>
-<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">ViewCompat</span>
-<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">WindowInsetsCompat</span>
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-<span class="s0">class </span><span class="s1">MainActivity : AppCompatActivity</span><span class="s2">() {</span>
-    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState: Bundle?</span><span class="s2">) {</span>
-        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">)</span>
-        <span class="s1">enableEdgeToEdge</span><span class="s2">()</span>
-        <span class="s1">setContentView</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">activity_main</span><span class="s2">)</span>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/gambar1"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:id="@+id/img_1"/>
 
-        <span class="s1">ViewCompat</span><span class="s2">.</span><span class="s1">setOnApplyWindowInsetsListener</span><span class="s2">(</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">main</span><span class="s2">)) { </span><span class="s1">v</span><span class="s2">, </span><span class="s1">insets </span><span class="s2">-&gt;</span>
-            <span class="s0">val </span><span class="s1">systemBars </span><span class="s2">= </span><span class="s1">insets</span><span class="s2">.</span><span class="s1">getInsets</span><span class="s2">(</span><span class="s1">WindowInsetsCompat</span><span class="s2">.</span><span class="s1">Type</span><span class="s2">.</span><span class="s1">systemBars</span><span class="s2">())</span>
-            <span class="s1">v</span><span class="s2">.</span><span class="s1">setPadding</span><span class="s2">(</span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">left</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">top</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">right</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">bottom</span><span class="s2">)</span>
-            <span class="s1">insets</span>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gambar2"
+        android:layout_below="@+id/img_1"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imd_2"/>
 
-        <span class="s2">}</span>
-        <span class="s0">val </span><span class="s1">btnLogin </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">&lt;</span><span class="s1">Button</span><span class="s2">&gt;(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">btn_1</span><span class="s2">)</span>
-        <span class="s1">btnLogin</span><span class="s2">.</span><span class="s1">setOnClickListener </span><span class="s2">{</span>
-            <span class="s0">val </span><span class="s1">intent </span><span class="s2">= </span><span class="s1">Intent</span><span class="s2">(</span><span class="s0">this</span><span class="s2">, </span><span class="s1">LoginActivity::</span><span class="s0">class</span><span class="s2">.</span><span class="s1">java</span><span class="s2">)</span>
-            <span class="s1">startActivity</span><span class="s2">(</span><span class="s1">intent</span><span class="s2">)</span>
-        <span class="s2">}</span>
-        <span class="s0">val </span><span class="s1">btnRegister </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">&lt;</span><span class="s1">Button</span><span class="s2">&gt;(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">btn_2</span><span class="s2">)</span>
-        <span class="s1">btnRegister</span><span class="s2">.</span><span class="s1">setOnClickListener </span><span class="s2">{</span>
-            <span class="s0">val </span><span class="s1">intent </span><span class="s2">= </span><span class="s1">Intent</span><span class="s2">(</span><span class="s0">this</span><span class="s2">, </span><span class="s1">RegisterActivity::</span><span class="s0">class</span><span class="s2">.</span><span class="s1">java</span><span class="s2">)</span>
-            <span class="s1">startActivity</span><span class="s2">(</span><span class="s1">intent</span><span class="s2">)</span>
-        <span class="s2">}</span>
-    <span class="s2">}</span>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imd_2"
+        android:text="KURIR R4I"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:id="@+id/txt_1"/>
 
-<span class="s2">}</span></pre>
-</body>
-</html>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_1"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Ubur-Ubur ikan lele pengiriman cepat lee,Ubur-ubur ikan lele murah lee"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
+        android:id="@+id/txt_2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_2"
+        android:width="300dp"
+        android:text="LOGIN"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:fontFamily="@font/poppinsbold"
+        android:id="@+id/btn_1"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_1"
+        android:width="300dp"
+        android:text="REGISTER"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:fontFamily="@font/poppinsbold"
+        android:id="@+id/btn_2"
+        />
+
+</RelativeLayout>
